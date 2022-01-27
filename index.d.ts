@@ -15,7 +15,7 @@ declare enum Method {
 
 interface YandexMetrikaProps {
     counterId: number,
-    options: {
+    options?: {
         accurateTrackBounce?: boolean | number,
         childIframe?: boolean,
         clickmap?: boolean,
