@@ -1,6 +1,7 @@
 import { initialState, Context } from "./Context";
 import React, { useEffect, useReducer } from "react";
 import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
 
 const YandexMetrika = ({ counterId, options, children }) => {
   const [store, reduce] = useReducer((state, action) => {
@@ -73,5 +74,16 @@ m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=
     </Context.Provider>
   );
 };
+
+YandexMetrika.displayName = "YandexMetrika"
+
+YandexMetrika.propTypes = {
+  counterId: PropTypes.number.isRequired,
+  options: PropTypes.object
+}
+
+YandexMetrika.defaultProps = {
+  options: {}
+}
 
 export default YandexMetrika;
